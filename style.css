@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+nav {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00adb5;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.content {
+  padding: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  padding: 60px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.media-img {
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+/* ANIMASI */
+.fade-in {
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container-profil {
+    display: flex; /* Mengaktifkan Flexbox */
+    gap: 30px; /* Jarak antara kolom kiri dan kanan */
+    align-items: flex-start; /* Menyusun item di bagian atas kontainer */
+    max-width: 900px; /* Atur lebar maksimum agar konten tidak terlalu melebar */
+    margin: 0 auto; /* Tengah-kan kontainer di halaman */
+}
+
+.header-profil {
+    /* Mengatur lebar bagian kiri (misalnya, 30% dari total lebar) */
+    flex: 1; 
+    /* Atau Anda bisa menggunakan: width: 30%; */
+}
+
+.header-profil img {
+    /* Pastikan gambar responsif di dalam kolomnya */
+    max-width: 100%; 
+    height: auto;
+    display: block; /* Menghilangkan ruang bawah yang tidak perlu pada gambar */
+}
+
+.detail-biodata {
+    /* Mengatur lebar bagian kanan (misalnya, 70% dari total lebar) */
+    flex: 2; 
+    /* Atau Anda bisa menggunakan: width: 70%; */
+}
+/* Styling Umum Section */
+.proyek-media-section {
+    padding: 50px 50px;
+    background-color: #f8f9fa; 
+}
+.proyek-media-section h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+.underline {
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin-bottom: 30px;
+}
+
+/* --- Styling Item Proyek (Berdampingan) --- */
+.proyek-item {
+    display: flex; /* Mengaktifkan Flexbox untuk menyusun anak (gambar dan teks) */
+    gap: 30px; /* Jarak antara gambar dan teks */
+    margin-bottom: 20px; /* Jarak antar item proyek */
+    align-items: flex-start; /* Menyusun item di bagian atas kontainer */
+}
+
+/* Styling Gambar Thumbnail */
+.proyek-thumbnail {
+    /* Mengatur lebar gambar agar menjadi kecil (misalnya 150px) */
+    flex-shrink: 0; /* Penting: mencegah gambar menyusut */
+    width: 150px; 
+    height: 100px; /* Atur tinggi jika Anda ingin ukuran tetap */
+    overflow: hidden; /* Sembunyikan jika gambar terlalu besar */
+    border-radius: 5px;
+}
+
+.proyek-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
+    display: block;
+}
+
+/* Styling Detail Teks */
+.proyek-detail {
+    /* Membiarkan detail teks mengambil sisa lebar yang tersedia */
+    flex-grow: 1; 
+}
+
+.proyek-detail h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.proyek-detail p {
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Styling Link 'Lihat Proyek' */
+.lihat-proyek-link {
+    color: #343a40;
+    text-decoration: none;
+    font-weight: bold;
+}
+.lihat-proyek-link:hover {
+    color: #007bff;
+}
+
+/* Garis pemisah antar proyek */
+.proyek-separator {
+    border: 0;
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 30px 0;
+}
+/* --- Styling Bagian Media Umum --- */
+.media-section {
+    padding: 80px 50px;
+    background-color: #f8f9fa; /* Latar belakang abu-abu muda */
+}
+
+.media-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #343a40;
+}
+
+/* Garis Biru (menggunakan class underline yang sudah ada) */
+.media-section .underline {
+    width: 60px;
+    height: 3px;
+    background-color: #007bff; 
+    margin-bottom: 20px;
+}
+
+.media-description {
+    color: #6c757d;
+    margin-bottom: 40px;
+    max-width: 900px;
+}
+
+/* --- Styling Grid Foto Media --- */
+.media-grid {
+    display: grid;
+    /* Membuat grid dengan 3 kolom yang sama lebar */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Jarak antar foto */
+}
+
+.media-item {
+    overflow: hidden; /* Penting untuk mengontrol dimensi gambar */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+.media-item img {
+    width: 100%;
+    /* Mengatur rasio aspek yang konsisten (misalnya 3:2) */
+    height: 200px; 
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.media-item img:hover {
+    transform: scale(1.05); /* Efek zoom halus saat di-hover */
+}
+
+/* Media Query untuk Mobile/Tablet */
+@media (max-width: 992px) {
+    .media-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+}
+@media (max-width: 576px) {
+    .media-grid {
+        grid-template-columns: 1fr; /* 1 kolom di HP */
+    }
+    .media-section {
+        padding: 40px 20px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  margin: 0;
+  padding-top: 80px; /* ruang untuk navbar */
+}
+.contact-container {
+    background: #ffffff;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+/* --- 1. Styling Navigasi (Menu) --- */
+.main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+
+  background-color: #111;
+  color: white;
+  z-index: 9999;
+}
+
+.main-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-navbar ul li a.active,
+.main-navbar ul li a:hover {
+  color: #00adb5;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #007bff; /* Ganti warna hover menjadi biru */
+    border-bottom: 2px solid #007bff; /* Garis bawah biru seperti contoh */
+}
